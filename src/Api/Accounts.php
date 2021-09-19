@@ -16,5 +16,5 @@ class Accounts extends Entity
     /**
      * @var string
      */
-    protected $endPoint = '/api/sales_accounts/';
+    protected $endPoint = '/crm/sales/api/sales_accounts/';
 }

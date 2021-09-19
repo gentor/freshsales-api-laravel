@@ -22,7 +22,7 @@ abstract class Entity
      * @var Client
      */
     protected $client;
-    
+
     /**
      * Entity constructor.
      * @param Client $client
@@ -31,7 +31,7 @@ abstract class Entity
     {
         $this->client = $client;
     }
-    
+
     /**
      * @param array $attributes
      * @param array $customFields
@@ -157,7 +157,7 @@ abstract class Entity
             'per_page' => $limit,
         ];
 
-        $uri = '/api/filtered_search/' . $this->entityType;
+        $uri = '/crm/sales/api/filtered_search/' . $this->entityType;
 
         return $this->client->request('post', $uri, $options);
     }
@@ -193,7 +193,7 @@ abstract class Entity
             $options = ['include' => 'field_group'];
         }
 
-        $uri = str_replace('/api/', '/api/settings/', $this->endPoint) . 'fields';
+        $uri = str_replace('/crm/sales/api/', '/crm/sales/api/settings/', $this->endPoint) . 'fields';
 
         return $this->client->request('get', $uri, $options);
     }

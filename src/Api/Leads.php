@@ -16,7 +16,7 @@ class Leads extends Contacts
     /**
      * @var string
      */
-    protected $endPoint = '/api/leads/';
+    protected $endPoint = '/crm/sales/api/leads/';
 
     /**
      * @param $id

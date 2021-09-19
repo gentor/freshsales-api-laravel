@@ -16,7 +16,7 @@ class Contacts extends Entity
     /**
      * @var string
      */
-    protected $endPoint = '/api/contacts/';
+    protected $endPoint = '/crm/sales/api/contacts/';
 
     /**
      * @param $ids

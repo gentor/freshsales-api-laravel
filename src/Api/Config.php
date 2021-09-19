@@ -30,7 +30,7 @@ class Config
     /**
      * @var string
      */
-    protected $endPoint = '/api/selector/';
+    protected $endPoint = '/crm/sales/api/selector/';
 
     /**
      * @var Client

@@ -16,5 +16,5 @@ class Deals extends Entity
     /**
      * @var string
      */
-    protected $endPoint = '/api/deals/';
+    protected $endPoint = '/crm/sales/api/deals/';
 }

@@ -36,7 +36,7 @@ class Search
             'per_page' => $perPage,
         ];
 
-        return $this->client->request('get', '/api/search', $options);
+        return $this->client->request('get', '/crm/sales/api/search', $options);
     }
 
     /**
@@ -53,6 +53,6 @@ class Search
             'entities' => implode(',', $entities),
         ];
 
-        return $this->client->request('get', '/api/lookup', $options);
+        return $this->client->request('get', '/crm/sales/api/lookup', $options);
     }
 }
