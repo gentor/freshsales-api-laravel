@@ -3,6 +3,16 @@ Freshsales API
 
 Wrapper on the REST Freshsales API for Laravel
 
+What changed after forking
+--------------------------
+
+* using GuzzleHttp 6
+* compatible with Laravel 5.*
+* using php 7.1.*
+* endpoint changed to /crm/sales/api/* from /api/*
+* Freshworks API url updated in readme
+* configuration section extended
+
 Installation
 ------------
 
@@ -24,7 +34,20 @@ return [
     'enable_rate_limit' => env('FRESHSALES_ENABLE_RATE_LIMIT'),
 ];
 ```
+Extend your /config/app.php
+```php
+'providers' => [
+    ...
+    Svolenszki\Freshsales\FreshsalesServiceProvider::class
+    ...
+]
 
+'aliases' => [
+    ...
+    'Freshsales' => Gentor\Freshsales\Freshsales::class
+    ...
+]
+```
 Usage
 -----
 
@@ -144,4 +167,4 @@ Freshsales::client()->getApiCallLimits();
 Documentation
 -------------
 
-[Freshsales API Docs](https://www.freshsales.io/api/)
+[Freshsales API Docs](https://developers.freshworks.com/crm/api/)
